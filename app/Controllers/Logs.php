@@ -2,15 +2,15 @@
 
 namespace App\Controllers;
 
-use App\Models\LogModel;
 use App\Controllers\BaseController;
+use App\Models\LogModel;
 
 class Logs extends BaseController
 {
 
-    public function log()
+    public function index()
 {
-    $logModel = new \App\Models\LogModel();
+    $logModel = new LogModel();
     
     // Get the 'date' from query string; if not set, use today's date
     $date = $this->request->getGet('date') ?? date('Y-m-d');

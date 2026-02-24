@@ -8,8 +8,10 @@ class UserModel extends Model
 {
     protected $table = 'users';
     protected $primaryKey = 'id';
+    
 
-    protected $allowedFields = ['uuid','email', 'password','role','status','name','phone', 'created_at', 'updated_at', 'deleted_at'];
+
+    protected $allowedFields = ['uuid','email','password','role','status','name','phone', 'created_at', 'updated_at', 'deleted_at'];
 
     public function getRecords($start, $length, $searchValue = '')
     {

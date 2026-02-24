@@ -155,5 +155,47 @@ $(document).ready(function () {
         ],
         responsive: true,
         autoWidth: false
+
+        
     });
+    document.addEventListener('DOMContentLoaded', function() {
+    function updateClock() {
+        const now = new Date();
+        
+        // Match the IDs from your HTML exactly
+        const clockEl = document.getElementById('live-clock');
+        const dateEl = document.getElementById('live-date');
+        const greetingEl = document.getElementById('greeting');
+
+        // Philippines Timezone formatting
+        const timeOptions = { 
+            timeZone: 'Asia/Manila', 
+            hour12: true, 
+            hour: '2-digit', 
+            minute: '2-digit', 
+            second: '2-digit' 
+        };
+
+        if (clockEl) {
+            clockEl.textContent = now.toLocaleTimeString('en-US', timeOptions);
+        }
+
+        if (dateEl) {
+            const dateOptions = { timeZone: 'Asia/Manila', weekday: 'long', year: 'numeric', month: 'long', day: 'numeric' };
+            dateEl.textContent = now.toLocaleDateString('en-US', dateOptions);
+        }
+
+        if (greetingEl) {
+            const hr = now.getHours();
+            let g = (hr < 12) ? "Good Morning" : (hr < 18) ? "Good Afternoon" : "Good Evening";
+            greetingEl.textContent = g + "!";
+        }
+    }
+
+    // Start the clock
+    updateClock(); 
+    setInterval(updateClock, 1000);
 });
+   
+    });
+    

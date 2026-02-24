@@ -27,7 +27,7 @@
               <h3 class="card-title">List of User Accounts</h3>
               <div class="float-right">
                 <button type="button" class="btn btn-md btn-primary" data-toggle="modal" data-target="#AddNewModal">
-                  <i class="fa fa-plus-circle fa fw"></i> Add New
+                  <i class="fa fa-plus-circle fa fw"></i> Add New User
                 </button>
               </div>
             </div>
@@ -139,6 +139,7 @@
                 <input type="text" name="name" id="name" class="form-control" required />
               </div>
 
+   
             <div class="form-group">
               <label for="email">Email</label>
               <input type="email" class="form-control" id="email" name="email" required>

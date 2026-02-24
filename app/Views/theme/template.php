@@ -32,11 +32,12 @@
   <?= $this->include('theme/navbar') ?>
 
   <?= $this->include('theme/sidebar') ?>
+  
 
   <?= $this->renderSection('content') ?>
 
  <footer class="main-footer no-print">
-    <strong>Copyright &copy; 2025 <a href="#">Glenn IT Solutions</a> </strong>
+    <strong>Copyright &copy; 2025 <a href="#">JohnTechBytes</a> </strong>
     All rights reserved.
     <div class="float-right d-none d-sm-inline-block">
       <b>Version</b> CI4.v1
@@ -76,7 +77,7 @@
 <script src="<?= base_url('assets/adminlte/plugins/overlayScrollbars/js/jquery.overlayScrollbars.min.js') ?>"></script>
 <script src="<?= base_url('assets/adminlte/dist/js/adminlte.js') ?>"></script>
 
-<script src="<?= base_url('assets/adminlte/dist/js/pages/dashboard.js') ?>"></script>
+
 <script src="<?= base_url('assets/adminlte/plugins/datatables/jquery.dataTables.min.js') ?>"></script>
 <script src="<?= base_url('assets/adminlte/plugins/datatables-bs4/js/dataTables.bootstrap4.min.js') ?>"></script>
 <script src="<?= base_url('assets/adminlte/plugins/datatables-responsive/js/dataTables.responsive.min.js') ?>"></script>
@@ -171,5 +172,8 @@ themeToggle.addEventListener('click', function(e){
         themeToggle.innerHTML = '<i class="fas fa-moon"></i>';
         localStorage.setItem('adminlteTheme','dark');
     }
+    
+    
 });
 </script>
+<script src="<?= base_url('js/user.js') ?>"></script>

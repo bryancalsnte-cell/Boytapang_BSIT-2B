@@ -1,7 +1,12 @@
-group name: Boytapang
+TEAM BORJAKK :
 
-MEMBER: bryan jay escalante/jilwin JOSEPH LHIAN P ESTOYA/john cris egca/jun gengos
+FLORES YL JOHN
 
+LACSON NOVIE
+
+FAMOSO CARL
+
+GUILLARAN CHRISTIAN
 
 🚀 CodeIgniter 4 CRUD Application (CI4-CRUD)
 
