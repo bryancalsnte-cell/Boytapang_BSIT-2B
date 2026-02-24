@@ -36,6 +36,45 @@ class Student extends Controller
         }
     }
 
+    public function update() {
+        $model = new StudentModel();
+        $logModel = new LogModel();
+
+        $userId   = $this->request->getPost('id');
+        $name     = $this->request->getPost('name');
+        $bday    = $this->request->getPost('bday');
+        $address = $this->request->getPost('address');
+       
+        $userData = [
+            'name'       => $name,
+            'bday'      => $bday,
+            'address'       => $address,
+      
+        ];
+
+        if (!empty($password)) {
+            $userData['password'] = password_hash('password', 'PASSWORD_BCRYPT');
+        }
+
+        if ($model->update($userId, $userData)) {
+            $logModel->addLog('User updated: ' . $name, 'UPDATED');
+            return $this->response->setJSON(['success' => true, 'message' => 'User updated successfully.']);
+        } else {
+            return $this->response->setJSON(['success' => false, 'message' => 'Error updating user.']);
+        }
+    }
+
+    public function edit($id) {
+        $model = new StudentModel();
+        $user = $model->find($id);
+
+        if ($user) {
+            return $this->response->setJSON(['data' => $user]);
+        } else {
+            return $this->response->setStatusCode(404)->setJSON(['error' => 'User not found']);
+        }
+    }
+
     public function fetchRecords() {
         $request = service('request');
         $model = new StudentModel();
