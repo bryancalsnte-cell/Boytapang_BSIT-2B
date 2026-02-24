@@ -36,9 +36,9 @@ $routes->get('user-registrations', 'Dashboard::userRegistrations');
 $routes->get('log', 'Logs::index');
 $routes->get('dashboard', 'Dashboard::log');
 //Parent routes
-$routes->get('/parent', 'Parent::index');
-$routes->post('parent/save', 'Parent::save');
-$routes->get('parent/edit/(:segment)', 'Parent::edit/$1');
-$routes->post('parent/update', 'Parent::update');
-$routes->delete('parent/delete/(:num)', 'Parent::delete/$1');
-$routes->post('parent/fetchRecords', 'Parent::fetchRecords');
+$routes->get('/student', 'Student::index');
+$routes->post('student/save', 'Student::save');
+$routes->get('student/edit/(:segment)', 'Student::edit/$1');
+$routes->post('student/update', 'Student::update');
+$routes->delete('student/delete/(:num)', 'Student::delete/$1');
+$routes->post('student/fetchRecords', 'Student::fetchRecords');
